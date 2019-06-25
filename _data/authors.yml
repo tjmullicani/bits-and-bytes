@@ -1,16 +1,7 @@
-# Sample Authors
-# Remove file or replace with your own
-
 Billy Rick:
-  name: Billy Rick
-  picture: /images/bio-photo-2.jpg
-  twitter: "@billyrick"
+  name: Timothy Mullican
+  picture: /assets/images/bio-photo.jpg
   links:
-    - title: Twitter
-      url: https://twitter.com/billyrick
-      icon: fab fa-twitter-square
-
-Cornelius Fiddlebone:
-  name: Cornelius Fiddlebone
-  picture: /images/bio-photo.jpg
-  twitter: corneliusfiddlebone
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/timothy-mullican-oscp-cissp-63476966
+      icon: fab fa-linkedin
