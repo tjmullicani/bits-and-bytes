@@ -66,7 +66,8 @@ Additional [sample posts](https://mmistakes.github.io/so-simple-theme/posts/) ca
 ## Table of Contents
 
 1. [Installation](#installation)
-    1. [GitHub Pages Method](#github-pages-method)
+    1. [Ruby Gem Method](#ruby-gem-method)
+    2. [GitHub Pages Method](#github-pages-method)
         1. [Remove the Unnecessary](#remove-the-unnecessary)
 2. [Upgrading](#upgrading)
     1. [Ruby Gem](#ruby-gem)
@@ -138,6 +139,26 @@ Additional [sample posts](https://mmistakes.github.io/so-simple-theme/posts/) ca
 ## Installation
 
 If you're running Jekyll v3.5+ and self-hosting you can quickly install the theme as a Ruby gem. If you're hosting with [**GitHub Pages**](https://pages.github.com/) you can install as a [remote theme](https://github.com/benbalter/jekyll-remote-theme) or directly copy all of the theme files (see [structure](#structure) below) into your project.
+
+### Ruby Gem Method
+
+1. Add this line to your Jekyll site's `Gemfile` (or [create one](example/Gemfile)):
+
+   ```ruby
+   gem "jekyll-theme-so-simple"
+   ```
+
+2. Add this line to your Jekyll site's `_config.yml` file:
+
+   ```yaml
+   theme: jekyll-theme-so-simple
+   ```
+
+3. Then run [Bundler](http://bundler.io/) to install the theme gem and dependencies:
+
+   ```terminal
+   bundle install
+   ```
 
 ### GitHub Pages Method
 
