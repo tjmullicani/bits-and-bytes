@@ -13,4 +13,4 @@ You can reach me at <a href="https://www.linkedin.com/in/timothy-mullican-oscp-c
 
 ## Additional Links
 
-[GitHub profile](https://github.com/tjmullicani)
+<a href="https://github.com/tjmullicani" target="_blank">GitHub profile</a>
