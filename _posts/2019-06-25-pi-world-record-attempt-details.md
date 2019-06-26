@@ -56,7 +56,7 @@ Based on the output of y-cruncher, I started looking for hardware on eBay. From 
       1. (7) HGST Hitachi 4TB
       2. (5) Seagate Constellation ES.3
 5. HPE StoreEver MSL4048 Tape Library
-    * The tape library is connected to the Dell R720xd via (2) fiber cables. VEEAM is running on the R720xd, and backs up the disk storage on the DL580 directly to tape.
+    The tape library is connected to the Dell R720xd via (2) fiber cables. VEEAM is running on the R720xd, and backs up the disk storage on the DL580 directly to tape.
     1. (1) LTO-5 FC Tape Drive
     2. (21) LTO Ultrium 5 Tape Data Cartridge 1.5TB
 
