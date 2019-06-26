@@ -46,6 +46,9 @@ markdown: kramdown
 feed:
   path: atom.xml
 
+kramdown:
+  footnote_backlink: "⤴"
+
 # Pagination - https://jekyllrb.com/docs/pagination/
 # paginate: 10
 # paginate_path: /page:num/
@@ -74,6 +77,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-target-blank
 
 # Front Matter Defaults
 defaults:
