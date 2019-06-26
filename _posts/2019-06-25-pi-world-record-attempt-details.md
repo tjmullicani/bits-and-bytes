@@ -41,7 +41,7 @@ Based on the output of y-cruncher, I started looking for hardware on eBay. From 
     * These drives are used in lieu of memory to provide y-cruncher the resources required to calculate 50 trillion digits of Pi (mounted on the DL580 as /drives/1 - /drives/48). I originally used HP StorageWorks D2600 disk shelves, but I didn't realize they limited the SATA speed to 3Gb/s. I upgraded to the D3600 disk shelves which support 6Gb/s SATA beginning in June of 2019.
     * (12) HGST Ultrastar He8 HUH728060ALE600 6TB 7.2K 128MB SATA 6Gb 3.5"
 3. Dell PowerEdge R720xd
-    * This server (Windows Server 2016) serves two primary purposes. First, it runs Veeam and is connected to a HP tape library. A Veeam job exists which is run manually monthly to backup the data from the 48 drives. Second, it has additional storage which will store the final compressed output that y-cruncher will generate.
+    * This server (Windows Server 2016) serves two primary purposes. First, it runs Veeam and is connected to a HP tape library. A Veeam job exists which is run manually monthly to backup the data from the 48 drives. Second, it has additional storage which will store the final compressed Pi digits that y-cruncher will generate.
     * (2) Intel Xeon E5-2670 8C/16T CPU
     * 128GB DDR3 ECC RAM
     * (2) 2.5" 600GB SAS 10K hard drives (RAID 1)
