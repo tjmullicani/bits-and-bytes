@@ -24,8 +24,7 @@ One caveat that can trip you up is the fact that y-cruncher calculates everythin
 
 Based on the output of y-cruncher, I started looking for hardware on eBay. From February to March of 2019, I started purchasing the equipment that would be required for the attempt: servers, hard drives, various PCI-E cards, a tape libary and drive, to name a few. In the end, this is the hardware I ended up with:
 
-![system hardware]()
-<img src="/images/pi-record-attempt-setup.jpg" alt="drawing" height="600"/>
+<img src="/images/pi-record-attempt-setup.jpg" alt="record attempt hardware" height="600"/>
 
 1. HP PROLIANT DL580 Gen8
   1. (4) Intel Xeon E7-4880V2 2.5GHz 15C/30T CPU
