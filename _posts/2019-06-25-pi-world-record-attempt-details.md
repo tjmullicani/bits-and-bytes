@@ -27,19 +27,17 @@ Based on the output of y-cruncher, I started looking for hardware on eBay. From 
 <img src="/images/pi-record-attempt-setup.jpg" alt="record attempt hardware" style="height:800px;"/>
 
 1. HP PROLIANT DL580 Gen8
-    1. (4) Intel Xeon E7-4880V2 2.5GHz 15C/30T CPU
-    2. 320GB DDR3 PC3-8500R ECC RAM
-    3. (5) 2.5" 100GB SATA MLC SSD hard drives (RAID 6)
-    4. (4) 6Gb Dual Port SAS HBA
-        1. Connected to the four HPE D3600 disk shelves
-        2. (3) LSI 9207-8e
-        3. (1) Dell PERC H200e (had it lying around...)
-    5. (1) Intel 10-Gigabit X540-AT2 Dual Port Ethernet Adapter
+    * (4) Intel Xeon E7-4880V2 2.5GHz 15C/30T CPU
+    * 320GB DDR3 PC3-8500R ECC RAM
+    * (5) 2.5" 100GB SATA MLC SSD hard drives (RAID 6)
+    * (4) 6Gb LSI 9207-8e Dual Port SAS HBA
+        * Connected to the four HPE D3600 disk shelves
+    * (1) Intel 10-Gigabit X540-AT2 Dual Port Ethernet Adapter
         * Direct connected via (2) CAT6 to Dell R720xd running VEEAM
-    6. (1) I340-T4 Gigabit Quad Port Ethernet Adapter
+    * (1) I340-T4 Gigabit Quad Port Ethernet Adapter
         * Used to connect server to the Internet
 2. (4) HP StorageWorks D3600
-    1. These drives are used in lieu of memory to provide y-cruncher the resources required to calculate 50 trillion digits of Pi. I originally used HP StorageWorks D2600 disk shelves, but I didn't realize they limited the SATA speed to 3Gb/s. I upgraded to the D3600 disk shelves which support 6Gb/s SATA beginning in June of 2019.
+    * These drives are used in lieu of memory to provide y-cruncher the resources required to calculate 50 trillion digits of Pi. I originally used HP StorageWorks D2600 disk shelves, but I didn't realize they limited the SATA speed to 3Gb/s. I upgraded to the D3600 disk shelves which support 6Gb/s SATA beginning in June of 2019.
     * (12) HGST Ultrastar He8 HUH728060ALE600 6TB 7.2K 128MB SATA 6Gb 3.5"
 3. Dell PowerEdge R720xd
     1. This server serves two primary purposes. First, it runs VEEAM and is connected to a HP tape library. A VEEAM job exists which is run manually monthly to backup the data from the 48 drives. Second, it has additional storage which will store the final compressed output that y-cruncher will generate.
