@@ -53,8 +53,8 @@ Based on the output of y-cruncher, I started looking for hardware on eBay. From 
 4. Dell PowerVault MD1200
     1. Storage that will hold the final compressed Pi digit output
     2. 40TB 7.2K SAS 3.5" (RAID6)
-      1. (7) HGST Hitachi 4TB
-      2. (5) Seagate Constellation ES.3 4TB
+        1. (7) HGST Hitachi 4TB
+        2. (5) Seagate Constellation ES.3 4TB
 5. HPE StoreEver MSL4048 Tape Library
     1. The tape library is connected to the Dell R720xd via (2) fiber cables. VEEAM is running on the R720xd, and backs up the disk storage on the DL580 directly to tape.
     2. (1) LTO-5 FC Tape Drive
