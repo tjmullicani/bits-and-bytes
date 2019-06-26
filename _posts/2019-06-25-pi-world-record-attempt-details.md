@@ -15,11 +15,7 @@ date: 2019-06-25T20:38:39-05:00
 
 Back in February of 2019, I had the bright idea to break the world record for Pi. My primary reason for attempting to break the record set by Emma Haruka Iwao/Google[^1]\ (March, 2019 -- 31.4 trillion digits) is to test the upper limits of my server hardware, as well as prove that you don't need to spend hundreds of thousands of dollars to achieve something great.
 
-[^1]: <https://cloud.google.com/blog/products/compute/calculating-31-4-trillion-digits-of-archimedes-constant-on-google-cloud>
-
 One of the first things I did was reach out to Alexander Yee, who wrote and maintains a program called y-cruncher[^2]. After emailing back and forth with Alex, I was able to figure out what I would need to achieve my goal: 50 trillion digits of Pi.
-
-[^2]: <http://www.numberworld.org/y-cruncher/>
 
 I used the y-cruncher program to determine the system requirements which are listed below. For my calculation, the program determined I would need 256TiB of ephemeral storage, and 38TiB for the final output.
 ![y-cruncher calculation values](/images/y-cruncher-calculation-values.PNG)
@@ -68,40 +64,37 @@ One of the first problems I had to address was backing up the ephemeral computat
 
 Here is a rough timeline of the world record attempt (still ongoing):
   * Feb 12, 2019 - This is the day I first reached out to Alex Yee about his y-cruncher program. I told him I was interested in breaking the world record (at that time it was 22.4 trillion digits set by Peter Trueb[^3]). My initial thoughts were to use a NetApp DS4486, NetApp FAS3220 filer, and Dell R910 to compute the record. At this point I wasn't sure how many digits I was going to calculate, but I knew it was going to be at least 22.4 trillion in order to beat the record.
-
-[^3]: <http://www.numberworld.org/y-cruncher/news/2016.html#2016_11_15>
-
   * Feb 12, 2019 - Alex responds with answers to some questions that I had relating to accessing storage (I originally planned on using iSCSI) and server CPU/memory. I was planning to access the required disk storage using iSCSI on the FAS3220, but Alex pointed out that this would be much too slow even over a 10 Gigabit link. Based on his analysis, I decided to directly connect the storage to the server using SAS cables (SFF-8088). Details were sketchy if I could directly attach the NetApp DS4486 to the main server, or if I would have to use a NetApp filer. After conducting some research, I decided it would just be easier to use external JBOD (non-RAID) disk enclosures. At the time I was looking at using several Dell PowerVault MD1200 enclosures.
   * Feb 13, 2019 - I start looking at the HP Proliant DL580 Gen8 instead of the Dell PowerEdge R910, due to the fact it has a newer processor and higher core count (15/30T vs 10/20T). After some analysis and research, I decide to shoot for 50 trillion digits of Pi. I originally planned on using RAID with the hard drives required during the calculation, but the sheer amount of storage required prevented this possibility. In order to mitigate the risk of a hard drive failure, I decided to utilize a HP MSL4048 tape library, which holds a maximum of 48 tapes. The unit I purchased off of eBay just happened to come with 21 LTO-5 tapes (not mentioned in the auction), so that was an added bonus! I got around to purchasing a single full-height LTO-5 tape drive so that I would be able to backup the hard drives to tape. Around the time I was looking for tape backup solutions, VEEAM was restructuring their licensing, and the community edition now supported tape backups for up to five hosts. Based on this information, I decide to download VEEAM Backup & Replication 9.5 Community Edition and put it on another server connected to the tape library over fiber. After coming to the decision to calculate 50 trillion digits, I determined I would need around 281TB of storage, and after looking on eBay I decided to purchase four HP D2600 external JBOD disk enclosures and forty-eight 6TB SATA drives to meet this need. I also saw that I would need 44TB for the final compressed Pi output. I picked up a Dell MD1200 external JBOD enclosure and twelve 4TB SAS drives that would serve this purpose. While the main 48 drives are not in a RAID volume, the twelve 4TB SAS drives are running in RAID6 to provide drive redundancy.
   * March 14, 2019 - I finally receive all of the hardware necessary for the computation to start. I contact Alex and he recommends I run several tests (I/O performance analysis, swap multiply). I learn that Google has beaten the current world record and was suprised to find that they were interested in this type of computation. Nevertheless, I was still aiming for 50 trillion digits, 18.6 trillion more then they were able to achieve. I also saw that it cost them around $200,000[^4], which seems very expensive for this type of computation. At this point I have still spent less than $10,000.
-
-[^4]: <https://youtu.be/BwkpNd2ceBk?t=459>
-
   * Apr 1, 2019 - All of the testing is completed and the I/O seek values are adjusted to 12Mb/s based on the results (due to drives being limited to 3Gb/s on HP D2600). I start the world record computation.
   * Apr 3, 2019 - I log into the server and I am greeted with the following error message: "A Raid-File operation has failed." After reaching out and troubleshooting, Alex recommends adjusting the ulimit value on Linux (by default, Linux only allows you to have 1023 files handles open by default)[^5]. I set the ulimit value to a very high value in order to prevent this issue from happening again, and this fixes the issue.
+  * April 5, 2019  - Status update: Series: S ( 14 ) 2.867%
+  * April 29, 2019 - Status update: Series: S ( 7 ) 14.836%
+  * May 20, 2019   - Series: S ( 5 ) 23.761%
+  * June 15, 2019  - I email Alex asking if there would be any issue upgrading the 3Gb/s SATA D2600 external disk enclosures to the D3600 6Gb/s SATA enclosure. He says there won't be any issue as long as the drives and mount points are the same.
+  * June 22-23, 2019 - I painstakingly swap out the D2600 disk enclosures with the D3600 model. I transfer all forty-eight drives to the new enclosures. I had to purchase new drive caddies as well (HP Gen8 model vs Gen5), since the new enclosure drive bays are less wide than the older model. I let Alex know the disk enclosure transfer appears to have been successful and based on the greatly improved transfer speed (it should speed up the computation finish by a month or two).
+    Old I/O performance analysis metrics:
+      Sequential Write:         3.15 GiB/s
+      Sequential Read:          3.08 GiB/s
+      Threshold Strided Write:  2.90 GiB/s
+      Threshold Strided Read:   2.55 GiB/s
+      VST Streaming:
+        Computation:  2.71 GiB/s
+        Disk I/O   :  1.93 GiB/s
+        Ratio      :  0.713024
+    New I/O performance analysis metrics:
+      Sequential Write:         5.69 GiB/s
+      Sequential Read:          5.90 GiB/s
+      Threshold Strided Write:  2.55 GiB/s
+      Threshold Strided Read:   1.24 GiB/s
+      VST Streaming:
+        Computation:  2.73 GiB/s
+        Disk I/O   :  2.18 GiB/s
+        Ratio      :  0.800453
 
+[^1]: <https://cloud.google.com/blog/products/compute/calculating-31-4-trillion-digits-of-archimedes-constant-on-google-cloud>
+[^2]: <http://www.numberworld.org/y-cruncher/>
+[^3]: <http://www.numberworld.org/y-cruncher/news/2016.html#2016_11_15>
+[^4]: <https://youtu.be/BwkpNd2ceBk?t=459>
 [^5]: <https://easyengine.io/tutorials/linux/increase-open-files-limit/>
-
-    * April 5, 2019  - Status update: Series: S ( 14 ) 2.867%
-    * April 29, 2019 - Status update: Series: S ( 7 ) 14.836%
-    * May 20, 2019   - Series: S ( 5 ) 23.761%
-    * June 15, 2019  - I email Alex asking if there would be any issue upgrading the 3Gb/s SATA D2600 external disk enclosures to the D3600 6Gb/s SATA enclosure. He says there won't be any issue as long as the drives and mount points are the same.
-    * June 22-23, 2019 - I painstakingly swap out the D2600 disk enclosures with the D3600 model. I transfer all forty-eight drives to the new enclosures. I had to purchase new drive caddies as well (HP Gen8 model vs Gen5), since the new enclosure drive bays are less wide than the older model. I let Alex know the disk enclosure transfer appears to have been successful and based on the greatly improved transfer speed (it should speed up the computation finish by a month or two).
-      Old I/O performance analysis metrics:
-        Sequential Write:         3.15 GiB/s
-        Sequential Read:          3.08 GiB/s
-        Threshold Strided Write:  2.90 GiB/s
-        Threshold Strided Read:   2.55 GiB/s
-        VST Streaming:
-          Computation:  2.71 GiB/s
-          Disk I/O   :  1.93 GiB/s
-          Ratio      :  0.713024
-      New I/O performance analysis metrics:
-        Sequential Write:         5.69 GiB/s
-        Sequential Read:          5.90 GiB/s
-        Threshold Strided Write:  2.55 GiB/s
-        Threshold Strided Read:   1.24 GiB/s
-        VST Streaming:
-          Computation:  2.73 GiB/s
-          Disk I/O   :  2.18 GiB/s
-          Ratio      :  0.800453
