@@ -78,19 +78,9 @@ Here is a rough timeline of the world record attempt (still ongoing):
 [^4]: <https://youtu.be/BwkpNd2ceBk?t=459>
 
   * Apr 1, 2019 - All of the testing is completed and the I/O seek values are adjusted to 12Mb/s based on the results (due to drives being limited to 3Gb/s on HP D2600). I start the world record computation.
-  * Apr 3, 2019 - I log into the server and I am greeted with the following error message:
-    "A Raid-File operation has failed.
-     Path: /drives/14/ycs-13-0/ycr_0000560d0579eca0.sf
+  * Apr 3, 2019 - I log into the server and I am greeted with the following error message: "A Raid-File operation has failed." After reaching out and troubleshooting, Alex recommends adjusting the ulimit value on Linux (by default, Linux only allows you to have 1023 files handles open by default)[^5]. I set the ulimit value to a very high value in order to prevent this issue from happening again, and this fixes the issue.
 
-     This raid group can tolerate 0 more failures. (excluding this one)
-
-     What do you wish to do?
-
-       0  -  Re-attempt the operation. (This may solve intermittent failures.)
-       1  -  Flag the drive as failed and continue.
-       2  -  Rebuild the drive on a different path." After reaching out and troubleshooting, Alex recommends adjusting the ulimit value on Linux (by default, Linux only allows you to have 1023 files handles open by default)[^5]. I set the ulimit value to a very high value in order to prevent this issue from happening again, and this fixes the issue.
-
-  [^5]: <https://easyengine.io/tutorials/linux/increase-open-files-limit/>
+[^5]: <https://easyengine.io/tutorials/linux/increase-open-files-limit/>
 
     * April 5, 2019  - Status update: Series: S ( 14 ) 2.867%
     * April 29, 2019 - Status update: Series: S ( 7 ) 14.836%
