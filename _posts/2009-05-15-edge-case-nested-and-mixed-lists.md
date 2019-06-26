@@ -11,7 +11,7 @@ tags:
   - edge case
   - lists
   - markup
-last_modified_at: 2019-06-25T20:38:39-05:00
+date: 2019-06-25T20:38:39-05:00
 ---
 
 Nested and mixed lists are an interesting beast. It's a corner case to make sure that lists within lists do not break the ordered list numbering order and list styles go deep enough.
