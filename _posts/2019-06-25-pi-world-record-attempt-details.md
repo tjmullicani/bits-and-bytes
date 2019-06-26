@@ -29,11 +29,9 @@ Based on the output of y-cruncher, I started looking for hardware on eBay. From 
 1. HP PROLIANT DL580 Gen8
     1. (4) Intel Xeon E7-4880V2 2.5GHz 15C/30T CPU
     2. 320GB DDR3 PC3-8500R ECC RAM
-      (8) 8GiB
-      (16) 16GiB
     3. (5) 2.5" 100GB SATA MLC SSD hard drives (RAID 6)
     4. (4) 6Gb Dual Port SAS HBA
-        * Connect to the four HPE D3600 disk shelves
+        * Connected to the four HPE D3600 disk shelves
         1. (3) LSI 9207-8e
         2. (1) Dell PERC H200e (had it lying around...)
     5. (1) Intel 10-Gigabit X540-AT2 Dual Port Ethernet Adapter
@@ -45,14 +43,13 @@ Based on the output of y-cruncher, I started looking for hardware on eBay. From 
     1. (12) HGST Ultrastar He8 HUH728060ALE600 6TB 7.2K 128MB SATA 6Gb 3.5"
 3. Dell PowerEdge R720xd
     * This server serves two primary purposes. First, it runs VEEAM and is connected to a HP tape library. A VEEAM job exists which is run manually monthly to backup the data from the 48 drives. Second, it has additional storage which will store the final compressed output that y-cruncher will generate.
-      1. (2) Intel Xeon E5-2670 8C/16T CPU
-      2. 128GB DDR3 ECC RAM
-          1. (8) 16GiB
-      3. (2) 2.5" 600GB SAS 10K hard drives (RAID 1)
-      4. (1) Emulex LPE 12002, Dual Port 8Gb Fiber Channel HBA
+    1. (2) Intel Xeon E5-2670 8C/16T CPU
+    2. 128GB DDR3 ECC RAM
+    3. (2) 2.5" 600GB SAS 10K hard drives (RAID 1)
+    4. Emulex LPE 12002, Dual Port 8Gb Fiber Channel HBA
         * Connected to tape library using (2) LC-LC OM3 2m fiber cables
-  5. Dell PERC H810 Adapter 6Gb RAID Controller Card
-      * Connected to Dell MD1200 disk shelf
+    5. Dell PERC H810 Adapter 6Gb RAID Controller Card
+        * Connected to Dell MD1200 disk shelf
 4. Dell PowerVault MD1200
     * Storage that will hold the final compressed Pi digit output
     1. 40TB 7.2K SAS 3.5" (RAID6)
