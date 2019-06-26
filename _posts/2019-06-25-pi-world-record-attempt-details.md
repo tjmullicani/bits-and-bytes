@@ -73,7 +73,7 @@ Here is a rough timeline of the world record attempt (still ongoing):
   * April 29, 2019 - Status update: Series: S ( 7 ) 14.836%
   * May 20, 2019   - Series: S ( 5 ) 23.761%
   * June 15, 2019  - I email Alex asking if there would be any issue upgrading the 3Gb/s SATA D2600 external disk enclosures to the D3600 6Gb/s SATA enclosure. He says there won't be any issue as long as the drives and mount points are the same.
-  * June 23, 2019 - I painstakingly swap out the D2600 disk enclosures with the D3600 model. I transfer all forty-eight drives to the new enclosures. I had to purchase new drive caddies as well (HP Gen8 model vs Gen5), since the new enclosure drive bays are less wide than the older model. I let Alex know the disk enclosure transfer appears to have been successful and based on the greatly improved transfer speed (it should speed up the computation finish by a month or two) -- write speed: 3.15 GiB/s vs 5.69 GiB/s, read speed: 3.08 GiB/s vs 5.90 GiB/s.
+  * June 23, 2019 - I swapped out the D2600 disk enclosures with the D3600 model. I transfer all forty-eight drives to the new enclosures. I had to purchase new drive caddies as well (HP Gen8 model vs Gen5), since the new enclosure drive bays are less wide than the older model. I let Alex know the disk enclosure transfer appears to have been successful and based on the greatly improved transfer speed (it should speed up the computation finish by a month or two) -- write speed: 3.15 GiB/s vs 5.69 GiB/s, read speed: 3.08 GiB/s vs 5.90 GiB/s.
     
 
 [^1]: <https://cloud.google.com/blog/products/compute/calculating-31-4-trillion-digits-of-archimedes-constant-on-google-cloud>
