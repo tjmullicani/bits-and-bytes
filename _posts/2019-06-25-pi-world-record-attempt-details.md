@@ -27,7 +27,7 @@ Based on the output of y-cruncher, I started looking for hardware on eBay. From 
 <img src="/images/pi-record-attempt-setup.jpg" alt="record attempt hardware" style="height:800px;"/>
 
 1. HP PROLIANT DL580 Gen8
-    * This server performs the Pi computation using the forty-eight attached 6TB hard drives. The final compressed Pi digits are transferred to the Dell R720xd via a cifs-mounted directory (/drives/main_output).
+    * This server (Ubuntu 18.10) performs the Pi computation using the forty-eight attached 6TB hard drives. The final compressed Pi digits are transferred to the Dell R720xd via a cifs-mounted directory (/drives/main_output).
     * (4) Intel Xeon E7-4880V2 2.5GHz 15C/30T CPU
     * 320GB DDR3 PC3-8500R ECC RAM
     * (5) 2.5" 100GB SATA MLC SSD hard drives (RAID 6)
@@ -41,7 +41,7 @@ Based on the output of y-cruncher, I started looking for hardware on eBay. From 
     * These drives are used in lieu of memory to provide y-cruncher the resources required to calculate 50 trillion digits of Pi (mounted on the DL580 as /drives/1 - /drives/48). I originally used HP StorageWorks D2600 disk shelves, but I didn't realize they limited the SATA speed to 3Gb/s. I upgraded to the D3600 disk shelves which support 6Gb/s SATA beginning in June of 2019.
     * (12) HGST Ultrastar He8 HUH728060ALE600 6TB 7.2K 128MB SATA 6Gb 3.5"
 3. Dell PowerEdge R720xd
-    * This server serves two primary purposes. First, it runs VEEAM and is connected to a HP tape library. A VEEAM job exists which is run manually monthly to backup the data from the 48 drives. Second, it has additional storage which will store the final compressed output that y-cruncher will generate.
+    * This server (Windows Server 2016) serves two primary purposes. First, it runs VEEAM and is connected to a HP tape library. A VEEAM job exists which is run manually monthly to backup the data from the 48 drives. Second, it has additional storage which will store the final compressed output that y-cruncher will generate.
     * (2) Intel Xeon E5-2670 8C/16T CPU
     * 128GB DDR3 ECC RAM
     * (2) 2.5" 600GB SAS 10K hard drives (RAID 1)
