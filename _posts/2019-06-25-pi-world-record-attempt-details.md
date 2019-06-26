@@ -23,6 +23,9 @@ I used the y-cruncher program to determine the system requirements which are lis
 One caveat that can trip you up is the fact that y-cruncher calculates everything in tebibytes (base-2), rather than terabytes (base-10). It can get confusing since hard drives are measured in terabytes, and the difference can be significant: for instance, 256TiB is equivalent to 281TB.
 
 Based on the output of y-cruncher, I started looking for hardware on eBay. From February to March of 2019, I started purchasing the equipment that would be required for the attempt: servers, hard drives, various PCI-E cards, a tape libary and drive, to name a few. In the end, this is the hardware I ended up with:
+
+![system hardware](/images/pi-record-attempt-setup.jpg)
+
 1. HP PROLIANT DL580 Gen8
   1. (4) Intel Xeon E7-4880V2 2.5GHz 15C/30T CPU
   2. 320GB DDR3 PC3-8500R ECC RAM
