@@ -89,9 +89,9 @@ Here is a rough timeline of the world record attempt (still ongoing):
   * June 19, 2019  - y-cruncher Status update: Series: S ( 3 ) 38.116%
   * June 23, 2019  - I swapped out the D2600 disk enclosures with the D3600 model. I transfer all forty-eight drives to the new enclosures. I had to purchase new drive caddies as well (HP Gen8 model vs Gen5), since the new enclosure drive bays are less wide than the older model. I let Alex know the disk enclosure transfer appears to have been successful and based on the greatly improved transfer speed (it should speed up the computation finish by a month or two) -- write speed: 3.15 GiB/s vs 5.69 GiB/s, read speed: 3.08 GiB/s vs 5.90 GiB/s.
 
-[^1]: <https://boinc.berkeley.edu/>
-[^2]: <https://cloud.google.com/blog/products/compute/calculating-31-4-trillion-digits-of-archimedes-constant-on-google-cloud>
-[^3]: <http://www.numberworld.org/y-cruncher/>
-[^4]: <http://www.numberworld.org/y-cruncher/news/2016.html#2016_11_15>
-[^5]: <https://youtu.be/BwkpNd2ceBk?t=459>
-[^6]: <https://easyengine.io/tutorials/linux/increase-open-files-limit/>
+[^1]: <https://boinc.berkeley.edu/>{:target="_blank"}
+[^2]: <https://cloud.google.com/blog/products/compute/calculating-31-4-trillion-digits-of-archimedes-constant-on-google-cloud>{:target="_blank"}
+[^3]: <http://www.numberworld.org/y-cruncher/>{:target="_blank"}
+[^4]: <http://www.numberworld.org/y-cruncher/news/2016.html#2016_11_15>{:target="_blank"}
+[^5]: <https://youtu.be/BwkpNd2ceBk?t=459>{:target="_blank"}
+[^6]: <https://easyengine.io/tutorials/linux/increase-open-files-limit/>{:target="_blank"}
