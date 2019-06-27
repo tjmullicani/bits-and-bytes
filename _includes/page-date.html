@@ -3,8 +3,10 @@
   {{ page.date | date: date_format }}
 
   {%- if page.last_modified_at -%}
-  Last updated: {%- page.last_modified_at | date: date_format -%}
+  Last updated:
+  {{ page.last_modified_at | date: date_format }}
   {%- else -%}
-  Last updated: {%- page.date | date: date_format -%}
+  Last updated:
+  {{ page.date | date: date_format }}
   {%- endif -%}
 </time>
