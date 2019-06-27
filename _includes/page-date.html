@@ -1,12 +1,12 @@
 <time class="page-date dt-published" datetime="{{ page.date | date_to_xmlschema }}">
   {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
   {{ page.date | date: date_format }}
-
+<br/><br/>
   {%- if page.last_modified_at -%}
-  Last updated:
+  Last updated:<br/>
   {{ page.last_modified_at | date: date_format }}
   {%- else -%}
-  Last updated:
+  Last updated:<br/>
   {{ page.date | date: date_format }}
   {%- endif -%}
 </time>
