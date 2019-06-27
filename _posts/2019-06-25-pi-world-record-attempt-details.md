@@ -30,35 +30,33 @@ Enough about the various issues you must keep in mind, though. Once I had a roug
 <img src="/images/pi-record-attempt-setup.jpg" alt="record attempt hardware" style="height:800px;"/>
 
 1. HP PROLIANT DL580 Gen8
-    * This server (Ubuntu 18.10) performs the Pi computation using the forty-eight attached 6TB hard drives. The final compressed Pi digits are transferred to the Dell R720xd via a cifs-mounted directory (/drives/main_output).
+    * This server (Ubuntu 18.10) performs the Pi computation. The final compressed Pi digits will be transferred to the Dell R720xd via a cifs-mounted directory (/drives/main_output).
     * (4) Intel Xeon E7-4880V2 2.5GHz 15C/30T CPU
     * 320GB DDR3 PC3-8500R ECC RAM
-    * (5) 2.5" 100GB SATA MLC SSD hard drives (RAID 6)
+    * (5) 2.5" 100GB SATA MLC SSD (RAID 6)
     * (4) 6Gb LSI 9207-8e Dual Port SAS HBA
-        * Connected to the four HPE D3600 disk shelves
+        * Connected to each HPE D3600 disk shelf via single SFF-8088 to SFF-8644 cable 2m
     * Intel 10-Gigabit X540-AT2 Dual Port Ethernet Adapter
-        * Direct connected via (2) CAT6 to Dell R720xd
+        * Dedicated link to Dell R720xd for Veeam backups
     * Intel 1-Gigabit I340-T4 Quad Port Ethernet Adapter
-        * Used to connect server to the Internet
+        * Connection to the Internet
 2. (4) HP StorageWorks D3600
-    * These drives are used in lieu of memory to provide y-cruncher the resources required to calculate 50 trillion digits of Pi (mounted on the DL580 as /drives/1 - /drives/48). I originally used HP StorageWorks D2600 disk shelves, but I didn't realize they limited the SATA speed to 3Gb/s. I upgraded to the D3600 disk shelves which support 6Gb/s SATA beginning in June of 2019.
-    * (12) HGST Ultrastar He8 HUH728060ALE600 6TB 7.2K 128MB SATA 6Gb 3.5"
+    * These drives are used in lieu of server memory to provide y-cruncher the resources required to calculate 50 trillion digits of Pi (mounted on the DL580 as /drives/1 - /drives/48). I originally used HP StorageWorks D2600 disk shelves, but I didn't realize they were limited the SATA backplane to 3Gb/s. I upgraded to the D3600 disk shelf which supports 6Gb/s SATA in June of 2019.
+    * (12) 3.5" 6TB SATA 7.2K HGST Ultrastar He8 HDD (JBOD)
 3. Dell PowerEdge R720xd
-    * This server (Windows Server 2016) serves two primary purposes. First, it runs Veeam and is connected to a HP tape library. A Veeam job exists which is run manually monthly to backup the data from the 48 drives. Second, it has additional storage which will store the final compressed Pi digits that y-cruncher will generate.
+    * This server (Windows Server 2016) serves two primary purposes. First, it is connected to a HP tape library. A Veeam job is manually run each month, which backs up data from the 48 drives running the Pi computation directly to tape. Second, it has an additional RAID6 storage volume which will contain the final compressed Pi digits that y-cruncher generates at the end of the computation.
     * (2) Intel Xeon E5-2670 8C/16T CPU
     * 128GB DDR3 ECC RAM
-    * (2) 2.5" 600GB SAS 10K hard drives (RAID 1)
+    * (2) 2.5" 600GB SAS 10K Seagate HDD (RAID 1)
     * Emulex LPE 12002, Dual Port 8Gb Fiber Channel HBA
         * Connected to tape library using (2) LC-LC OM3 2m fiber cables
     * Dell PERC H810 Adapter 6Gb RAID Controller Card
         * Connected to Dell MD1200 disk shelf
 4. Dell PowerVault MD1200
-    * Storage that will hold the final compressed Pi digit output
     * 40TB 7.2K SAS 3.5" (RAID6)
         * (7) HGST Hitachi 4TB
         * (5) Seagate Constellation ES.3 4TB
 5. HPE StoreEver MSL4048 Tape Library
-    * The tape library is connected to the Dell R720xd via (2) fiber cables. Veeam is running on the R720xd, and backs up the disk storage on the DL580 directly to tape.
     * LTO-5 FC Tape Drive
     * (21) LTO Ultrium 5 Tape Data Cartridge 1.5TB
 
