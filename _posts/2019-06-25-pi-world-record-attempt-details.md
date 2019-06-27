@@ -11,6 +11,7 @@ tags:
   - Math
   - World Record
 date: 2019-06-25T20:38:39-05:00
+last_modified_at: 2019-06-27T00:45:08-05:00
 ---
 
 Before I go into the specifics of my record attempt, it is important for you to have some background information. Over the past few years I have been steadily acquiring server hardware to increase my knowledge of system administration and cyber security. This is not only for personal growth: it has also helped me immensely in my professional career. I have served in various roles including cyber security (Cyber Defense Analyst, Chief Information Security Officer) and system administration (Senior System Administrator). Historically, I have also donated my spare system computing resources to various distributed computing projects through the BOINC[^1] platform. In late 2018 I decided that I shift the primary focus of my lab to distributed computing. To support this goal I acquired the HP c7000 bladesystem that you will see later in the photo of my homelab. Anyways, back to the reason you are here: My primary reason for attempting to break the record set by Emma Haruka Iwao/Google[^2]  (March, 2019 -- 31.4 trillion digits) is to test the upper bounds of my server hardware. Additionally I wanted to prove that people, rather than businesses with vast pools of resources and money, can still do achieve marvelous things.
