@@ -1,3 +1,18 @@
+---
+title: "Calculating Pi: Remove unneeded y-cruncher files before a backup"
+excerpt_separator: "<!--more-->"
+author: Timothy Mullican
+permalink: calculating-pi-remove-unneeded-files-before-backup
+comments: false
+categories:
+  - Pi
+tags:
+  - Pi
+  - Math
+  - World Record
+  - Script
+date: 2019-06-27T00:45:08-05:00
+---
 This is a continuation of my Pi world record attempt [series] <{% post_url 2019-06-25-pi-world-record-attempt-details %}>. Below is the script I use to remove unneeded files from drives when generating a y-cruncher backup. It's quick and dirty, but does the job. If you neglect to remove unneeded files in between y-cruncher runs, you risk the disk running out of space and your computation failing. Anyways, I run this script right before executing the Veeam backup to tape job.
 
 ```bash
@@ -7,7 +22,7 @@ checkpoint_file="$1"
 declare -a files
 files=()
 num_drives=48
-
+/
 # From https://stackoverflow.com/a/14367368
 array_contains2 () {
     local array="$1[@]"
