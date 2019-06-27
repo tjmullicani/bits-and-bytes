@@ -22,7 +22,7 @@ checkpoint_file="$1"
 declare -a files
 files=()
 num_drives=48
-/
+
 # From https://stackoverflow.com/a/14367368
 array_contains2 () {
     local array="$1[@]"
