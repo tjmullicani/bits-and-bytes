@@ -23,7 +23,7 @@ One of the first things I did was reach out to Alexander Yee, who wrote and main
 
 One of the first things that you may notice is that y-cruncher calculates everything in tebibytes (base-2), rather than terabytes (base-10). It can be confusing since these units of measure are sometimes used interchangeably (I'm looking at you, Windows[^4], and Linux[^5] df "-h" vs "-H"), but the difference can be significant: for example, 256TiB is equivalent to 281TB. You don't want to get 3/4 of the way through a record attempt and realize you don't have enough storage.
 
-Enough about the various issues you must keep in mind, though. Once I had a rough estimate of the amount of equipment and disk required for the Pi computation, I started looking for used hardware, primarily on eBay. From January to March of 2019, I started purchasing equipment that would be required for the attempt: a new beefy server, many hard drives, various PCI-E cards, a tape libary and drive, to name just a few. Below is a picture of my home lab in it's entirety (minus an Asus ESC8000 G4 in my office). Everything inside the red box is used for the Pi computation.
+Once I had a rough estimate of the amount of equipment and disk required for the Pi computation, I started looking for used hardware, primarily on eBay. From January to March of 2019, I started purchasing equipment that would be required for the attempt: a new beefy server, many hard drives, various PCI-E cards, a tape libary and drive, to name just a few. Below is a picture of my home lab in it's entirety (minus an Asus ESC8000 G4 in my office). Everything inside the red box is used for the Pi computation.
 
 <img src="/images/pi-record-attempt-setup.jpg" alt="record attempt hardware" style="height:800px;"/>
 
