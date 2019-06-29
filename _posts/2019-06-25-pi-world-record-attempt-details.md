@@ -88,8 +88,8 @@ Here is a rough timeline of the world record attempt (still ongoing):
 
 [^1]: <https://boinc.berkeley.edu/>{:target="_blank"}
 [^2]: <https://cloud.google.com/blog/products/compute/calculating-31-4-trillion-digits-of-archimedes-constant-on-google-cloud>{:target="_blank"}
-[^3]: <http://www.numberworld.org/y-cruncher/>{:target="_blank"}
-[^4]: <https://opensciencegrid.org/>{:target="_blank"}
+[^3]: <https://opensciencegrid.org/>{:target="_blank"}
+[^4]: <http://www.numberworld.org/y-cruncher/>{:target="_blank"}
 [^5]: <https://blog.livedrive.com/2012/08/why-a-windows-terabyte-isnt-really-a-terabyte/>{:target="_blank"}
 [^6]: <https://www.freebsd.org/cgi/man.cgi?df(1)>{:target="_blank"}
 [^7]: <http://www.numberworld.org/y-cruncher/guides/swapmode.html#intro>{:target="_blank"}
