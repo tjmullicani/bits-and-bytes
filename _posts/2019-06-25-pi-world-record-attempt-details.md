@@ -80,7 +80,6 @@ Here is a rough timeline of the world record attempt (still ongoing):
   * April 27, 2019 - y-cruncher Status update: Series: S ( 7 ) 14.836%
   * May 6, 2019    - y-cruncher Status update: Series: S ( 6 ) 18.773%
   * May 16, 2019   - y-cruncher Status update: Series: S ( 5 ) 23.761%
-  * May 20, 2019   - y-cruncher Status update: Series: S ( 5 ) 23.761%
   * May 31, 2019   - y-cruncher Status update: Series: S ( 4 ) 30.086%
   * June 15, 2019  - I email Alex asking if there would be any issue upgrading my 3Gb/s SATA D2600 external disk enclosures to the D3600 6Gb/s model. He says there won't be any issue as long as the drives and mount points appear the same to the operating system.
   * June 19, 2019  - y-cruncher Status update: Series: S ( 3 ) 38.116%
