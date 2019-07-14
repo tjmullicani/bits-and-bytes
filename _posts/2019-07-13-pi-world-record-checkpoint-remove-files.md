@@ -15,7 +15,7 @@ tags:
 date: 2019-07-13T23:04:52-05:00
 last_modified_at: 2019-07-13T23:04:52-05:00
 ---
-This is a continuation of my Pi world record attempt [series]({% post_url 2019-06-25-pi-world-record-attempt-details %}). Before I quit y-cruncher and start a backup, I need to know when the y-cruncher checkpoint file is modified. To accomplish this task, I use a program called incron[^1][^2]. incron is able to detect file/directory changes and run commands as a result. In my case, I have a bash script that is executed when the y-cruncher Checkpoint File is modified, which will send me a text message (using Twilio API). Below is a copy of my incron configuration the script which send a text message. The script isn't perfect, but it works well enough for me.
+This is a continuation of my Pi world record attempt [series]({% post_url 2019-06-25-pi-world-record-attempt-details %}). Before I quit y-cruncher and start a backup, I need to know when the y-cruncher checkpoint file is modified. To accomplish this task, I use a program called incron[^1]. incron is able to detect file/directory changes and run commands as a result. In my case, I have a bash script that is executed when the y-cruncher Checkpoint File is modified, which will send me a text message (using Twilio API). Below is a copy of my incron configuration the script which send a text message. The script isn't perfect, but it works well enough for me.
 
 ```bash
 $ incrontab -l
@@ -78,4 +78,3 @@ curl -s -X POST -d "Body=$output" \
 ```
 
 [^1]: https://www.howtoforge.com/tutorial/trigger-commands-on-file-or-directory-changes-with-incron/
-[^2]: https://linux.die.net/man/5/incrontab
