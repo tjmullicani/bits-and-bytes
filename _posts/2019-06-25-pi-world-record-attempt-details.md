@@ -11,7 +11,7 @@ tags:
   - Math
   - World Record
 date: 2019-06-25T20:38:39-05:00
-last_modified_at: 2019-07-18T21:46:07-05:00
+last_modified_at: 2019-09-01T21:04:30-05:00
 ---
 
 Before I go into the specifics of my record attempt, it is important for you to have some background information. Over the past few years I have been steadily acquiring server hardware to increase my knowledge of system administration and cyber security. This is not only for personal growth: it has also helped me immensely in my professional career. I have served in various roles including cyber security (Cyber Defense Analyst, Chief Information Security Officer) and system administration (Senior System Administrator). Historically, I have also donated my spare system computing resources to various distributed computing projects through the BOINC[^1] platform. In late 2018 I decided to shift the primary focus of my lab to distributed computing. I still maintain a small 1U server for personal use, but most of the other servers run BOINC exclusively.
@@ -85,6 +85,7 @@ Here is a rough timeline of the world record attempt (still ongoing):
   * June 19, 2019  - y-cruncher Status update: Series: S ( 3 ) 38.116%
   * June 23, 2019  - I swapped out the D2600 disk enclosures with the D3600 model. I transfer all forty-eight drives to the new enclosures. I had to purchase new drive caddies as well (HP Gen8 model caddy vs Gen5/6 caddy), since the new enclosure drive bays are less wide than the older model. I let Alex know the disk enclosure transfer appears to have been successful and share the updated drive speed metrics -- write speed: 3.15 GiB/s vs 5.69 GiB/s, read speed: 3.08 GiB/s vs 5.90 GiB/s. Based on the increased (nearly doubled speed), Alex lets me know the computation should finish a month or two ahead of schedule. Maybe the record will be broken by August of 2019?
   * July 14, 2019  - y-cruncher Status update: Series: S ( 2 ) 48.327%
+  * August 15, 2019 - y-cruncher Status update: Series: S ( 1 ) 61.346%
 
 [^1]: <https://boinc.berkeley.edu/>{:target="_blank"}
 [^2]: <https://cloud.google.com/blog/products/compute/calculating-31-4-trillion-digits-of-archimedes-constant-on-google-cloud>{:target="_blank"}
