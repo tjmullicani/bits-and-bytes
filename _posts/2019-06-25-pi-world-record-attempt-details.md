@@ -86,6 +86,7 @@ Here is a rough timeline of the world record attempt (still ongoing):
   * June 23, 2019  - I swapped out the D2600 disk enclosures with the D3600 model. I transfer all forty-eight drives to the new enclosures. I had to purchase new drive caddies as well (HP Gen8 model caddy vs Gen5/6 caddy), since the new enclosure drive bays are less wide than the older model. I let Alex know the disk enclosure transfer appears to have been successful and share the updated drive speed metrics -- write speed: 3.15 GiB/s vs 5.69 GiB/s, read speed: 3.08 GiB/s vs 5.90 GiB/s. Based on the increased (nearly doubled speed), Alex lets me know the computation should finish a month or two ahead of schedule. Maybe the record will be broken by August of 2019?
   * July 14, 2019  - y-cruncher Status update: Series: S ( 2 ) 48.327%
   * August 15, 2019 - y-cruncher Status update: Series: S ( 1 ) 61.346%
+  * September 21, 2019 - y-cruncher Status update: Series: S ( 0 ) 78.042%
 
 [^1]: <https://boinc.berkeley.edu/>{:target="_blank"}
 [^2]: <https://cloud.google.com/blog/products/compute/calculating-31-4-trillion-digits-of-archimedes-constant-on-google-cloud>{:target="_blank"}
