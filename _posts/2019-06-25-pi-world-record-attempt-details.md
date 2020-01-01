@@ -11,7 +11,7 @@ tags:
   - Math
   - World Record
 date: 2019-06-25T20:38:39-05:00
-last_modified_at: 2019-11-27T18:53:27-05:00
+last_modified_at: 2019-12-31T21:07:02-05:00
 ---
 
 Before I go into the specifics of my record attempt, it is important for you to have some background information. Over the past few years I have been steadily acquiring server hardware to increase my knowledge of system administration and cyber security. This is not only for personal growth: it has also helped me immensely in my professional career. I have served in various roles including cyber security (Cyber Defense Analyst, Chief Information Security Officer) and system administration (Senior System Administrator). Historically, I have also donated my spare system computing resources to various distributed computing projects through the BOINC[^1] platform. In late 2018 I decided to shift the primary focus of my lab to distributed computing. I still maintain a small 1U server for personal use, but most of the other servers run BOINC exclusively.
@@ -90,6 +90,9 @@ Here is a rough timeline of the world record attempt (still ongoing):
   * November 9, 2019 - y-cruncher Status update: Finishing Series
   * November 14, 2019 - y-cruncher Status update: Large Division
   * November 26, 2019 - y-cruncher Status update: InvSqrt(10005)
+  * December 25, 2019 - y-cruncher is in the middle of performing the output base conversion (after writing the hexadecimal digits). Due to severe weather, I had to shut down the server. This was unfortunate because the program is unable to checkpoint during the base conversion process, meaning I lost about 2 weeks worth of work.
+  * December 31, 2019 - As luck would have it, a transformer next to my house decided to cease functioning and the power went out yet again. This means I had to restart from the last checkpoint yet again, losing another 2 weeks worth of work.
+
 
 [^1]: <https://boinc.berkeley.edu/>{:target="_blank"}
 [^2]: <https://cloud.google.com/blog/products/compute/calculating-31-4-trillion-digits-of-archimedes-constant-on-google-cloud>{:target="_blank"}
