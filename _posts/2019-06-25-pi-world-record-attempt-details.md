@@ -11,7 +11,7 @@ tags:
   - Math
   - World Record
 date: 2019-06-25T20:38:39-05:00
-last_modified_at: 2019-12-31T21:07:02-05:00
+last_modified_at: 2020-01-29T21:11:21-05:00
 ---
 
 Before I go into the specifics of my record attempt, it is important for you to have some background information. Over the past few years I have been steadily acquiring server hardware to increase my knowledge of system administration and cyber security. This is not only for personal growth: it has also helped me immensely in my professional career. I have served in various roles including cyber security (Cyber Defense Analyst, Chief Information Security Officer) and system administration (Senior System Administrator). Historically, I have also donated my spare system computing resources to various distributed computing projects through the BOINC[^1] platform. In late 2018 I decided to shift the primary focus of my lab to distributed computing. I still maintain a small 1U server for personal use, but most of the other servers run BOINC exclusively.
