@@ -91,8 +91,10 @@ Here is a rough timeline of the world record attempt (still ongoing):
   * November 14, 2019 - y-cruncher Status update: Large Division
   * November 26, 2019 - y-cruncher Status update: InvSqrt(10005)
   * December 25, 2019 - y-cruncher is in the middle of performing the output base conversion (after writing the hexadecimal digits). Due to severe weather, I had to shut down the server. This was unfortunate because the program is unable to checkpoint during the base conversion process, meaning I lost about 2 weeks worth of work.
-  * December 31, 2019 - As luck would have it, a transformer next to my house decided to cease functioning and the power went out yet again. This means I had to restart from the last checkpoint yet again, losing another 2 weeks worth of work.
-
+  * December 31, 2019 - As luck would have it, a transformer next to my house blew and the power went out yet again. This means I had to restart from the last checkpoint yet again, losing another 2 weeks worth of work.
+  * January 18, 2020 - Base conversion finished. y-cruncher begins writing the Pi decimal digits.
+  * January 20. Decimal digits written. Begin verification of base conversion, decimal output, and hexadecimal output.
+  * January 29, 2020 - Pi Computation is finished! The world record appears to be broken!
 
 [^1]: <https://boinc.berkeley.edu/>{:target="_blank"}
 [^2]: <https://cloud.google.com/blog/products/compute/calculating-31-4-trillion-digits-of-archimedes-constant-on-google-cloud>{:target="_blank"}
